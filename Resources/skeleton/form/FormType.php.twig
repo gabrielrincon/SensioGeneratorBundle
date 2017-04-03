@@ -20,11 +20,11 @@ class {{ form_class }} extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            {%- for field in fields -%}
-
+        $builder
+            {% for field in fields -%}
                 ->add('{{ field }}')
-
-            {%- endfor %};
+            {% endfor -%}
+        ;
     }
     {% endif %}
 
